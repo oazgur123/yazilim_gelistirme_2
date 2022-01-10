@@ -6,6 +6,8 @@
   use App\Http\Controllers\PdfUploadMongo;
   use App\Http\Controllers\ListPDF;
   use App\Http\Controllers\PdfGuncelle;
+  use App\Http\Controllers\FtpUpload;
+
 
 
 
@@ -60,7 +62,7 @@
   Route::get('/admin',function(){
       return view('admin.home');
   });
-  
+
   Route::get('admin/basvurular', function(){
     return view('admin.basvurular');
   })->name('admin_basvurular');
@@ -74,3 +76,6 @@
 
 
   Route::post('admin/pdfguncelle',[PdfGuncelle::class,'guncelle'])->name('pdfguncelle');
+
+Route::get('/upload', [FtpUpload::class,'index']);
+Route::post('/store', [FtpUpload::class,'store']);

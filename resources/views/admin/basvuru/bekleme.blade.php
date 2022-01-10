@@ -92,7 +92,7 @@ h3,   p{
                     <th scope="row">{{$basvuru->tipName}}</th>
                     <td>{{$basvuru->onay}}</td>
                     <td>{{$basvuru->created_at}}</td>
-                    <td> <a href="/{{$basvuru->pdf_url}}" target="_blank"><i class="bi bi-file-earmark-pdf" style="color:white;"></i></a> </td>
+                    <td> <a href="{{$basvuru->pdf_url}}" target="_blank"><i class="bi bi-file-earmark-pdf" style="color:white;"></i></a> </td>
                   </tr>
                   @endforeach
                 </tbody>

@@ -5,6 +5,14 @@
 
 
 <div class="container" >
+  @if ($message = Session::get('success'))
+      <div class="success mt-5">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{ $message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+      </div>
+  @endif
     <div class="row justify-content-center" style="margin-top:10%;">
         <div class="col-md-8">
             <div class="card">

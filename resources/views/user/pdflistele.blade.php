@@ -38,7 +38,7 @@ body{
                     <th scope="row">{{$pdf->tip}}</th>
                     <td>{{$pdf->onay}}</td>
                     <td>{{$pdf->created_at}}</td>
-                    <td> <a href="/{{$pdf->pdf_url}}" target="_blank"><i class="bi bi-file-earmark-pdf" style="color:white;"></i></a> </td>
+                    <td> <a href="{{$pdf->pdf_url}}" target="_blank"><i class="bi bi-file-earmark-pdf" style="color:white;"></i></a> </td>
                   </tr>
                   @endforeach
                 </tbody>
